@@ -1,0 +1,107 @@
+% Original Author: Rajiv Verma (rajivnitece@gmail.com)
+% NIT Kurukshetra, India-136119
+
+% Modified by: Kavya Manohar (d-tve19jan002@cet.ac.in)
+% College of Engineering Trivandrum
+% APJ Abdul Kalam Technological University, Thiruvannathapuram
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[a4paper,12pt,twoside]{report}
+
+
+\input{Preamble/pagestyle.tex}
+\input{Preamble/packages.tex}
+\input{Preamble/fonts.tex}
+\input{Preamble/sectionoptions.tex}
+\input{Preamble/macro.tex}
+
+\input{Front/glossaries.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+	%%%%%%%%%%%%%%%%%%%  Title page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\pagenumbering{roman}
+	\input{Front/titlepage.tex}                    % title page
+	\cleardoublepage                         % for blank page
+		%%%%%%%%%%%%%%%%%%%  Declaration page %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\input{Front/declaration.tex}     
+	\addcontentsline{toc}{chapter}{Declaration} 
+	\cleardoublepage
+	%%%%%%%%%%%%%%%%%%%  Certificate page %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\input{Front/certificate.tex}     
+	\addcontentsline{toc}{chapter}{CERTIFICATE} 
+	\cleardoublepage
+% 	%%%%%%%%%%%%%%%%%%% Dedication page %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 	\input{dedication.tex}                   % dedication page
+% 	\addcontentsline{toc}{chapter}{Dedication}
+% 	\cleardoublepage
+	%%%%%%%%%%%%%%%%%%% Acknowledgement page %%%%%%%%%%%%%%%%%%%%%%%%%%
+    \input{Front/acknowledgment.tex}
+    \addcontentsline{toc}{chapter}{ACKNOWLEDGMENTS}
+	\cleardoublepage
+	%%%%%%%%%%%%%%%%%%% Abstract page %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\input{Front/abstract.tex}
+	\addcontentsline{toc}{chapter}{ABSTRACT}
+	\clearpage
+	%%%%%%%%%%%%%%%%%%% Table of contents %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\begin{flushleft}
+		\tableofcontents
+	\end{flushleft}
+	\cleardoublepage
+	%%%%%%%%%%%%%%%%%%% Table of figures %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\begin{flushleft}
+		\addcontentsline{toc}{chapter}{List of Figures}
+		\listoffigures
+	\end{flushleft}	
+	\cleardoublepage
+	%%%%%%%%%%%%%%%%%%% Table of tables %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\begin{flushleft}
+		\addcontentsline{toc}{chapter}{List of Tables}
+		\listoftables
+	\end{flushleft}
+	\cleardoublepage
+	%%%%%%%%%%%%%%%%%%% Table of acroymns %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	\input{Front/LOA.tex}
+	\addcontentsline{toc}{chapter}{List of Acronyms/Abbreviations}
+
+	\clearpage
+	%%%%%%%%%%%%%%%%%%% Table of symbols %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+    \input{Front/LOS.tex}
+	\addcontentsline{toc}{chapter}{List of Symbols}
+
+	\cleardoublepage
+	%%%%%%%%%%%%%% Chapters 1-9 %%%%%%%%%%%%%%
+	\pagenumbering{arabic}
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Chapter-1 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\input{chapters/chapter1.tex}
+	\cleardoublepage
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Chapter-2 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\input{chapters/chapter2.tex}
+	\cleardoublepage
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Chapter-3 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\input{chapters/chapter3.tex}
+	\cleardoublepage
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Chapter-4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\input{chapters/chapter4.tex}
+	\cleardoublepage
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Chapter-5 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\input{chapters/chapter5.tex}
+	\clearpage	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Chapter-6 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\input{chapters/chapter6.tex}
+	\cleardoublepage
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Chapter-7 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\input{chapters/chapter7.tex}
+	\cleardoublepage
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% List of publications %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\input{Back/listofpublications.tex}
+	\addcontentsline{toc}{chapter}{List of Publications}
+	\cleardoublepage
+% 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	\addcontentsline{toc}{chapter}{Bibliography}
+	\bibliography{thesisref}
+	\bibliographystyle{unsrt}
+
+\end{document}
