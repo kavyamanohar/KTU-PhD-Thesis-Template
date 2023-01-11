@@ -1,9 +1,6 @@
-% Original Author: Rajiv Verma (rajivnitece@gmail.com)
-% NIT Kurukshetra, India-136119
+% Created by: Kavya Manohar (d-tve19jan002@cet.ac.in), College of Engineering Trivandrum to comply with the PhD Thesis Regulations of APJ Abdul Kalam Technological University, Thiruvananthapuram, Kerala India.  This has been adapted from the Thesis template prepared by Rajiv Verma (rajivnitece@gmail.com) for NIT Kurukshetra, India-136119.
 
-% Modified by: Kavya Manohar (d-tve19jan002@cet.ac.in)
-% College of Engineering Trivandrum
-% APJ Abdul Kalam Technological University, Thiruvannathapuram
+% I have followed the directory structure in a reusable template for journals in the Humanities, developed by Wout Dillen. \emph{varianTeX} is open source, available on GitHub, and deposited in the \href{https://about.zenodo.org}{Zenodo Open Science Repository}. DOI: \href{https://zenodo.org/record/3484651#.X0PdDy2w3kI}{10.5281/zenodo.3484651}.  
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \documentclass[a4paper,12pt,twoside]{report}
@@ -14,65 +11,65 @@
 \input{Preamble/fonts.tex}
 \input{Preamble/sectionoptions.tex}
 \input{Preamble/macro.tex}
-
-\input{Front/glossaries.tex}
-
+\input{Front/glossarydefinition.tex}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 	%%%%%%%%%%%%%%%%%%%  Title page %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\pagenumbering{roman}
-	\input{Front/titlepage.tex}                    % title page
+	
+    \input{Front/titlepage.tex}                   
 	\cleardoublepage                         % for blank page
-		%%%%%%%%%%%%%%%%%%%  Declaration page %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\input{Front/declaration.tex}     
-	\addcontentsline{toc}{chapter}{Declaration} 
+	
+ %%%%%%%%%%%%%%%%%%  Declaration page %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \phantomsection % To make the reference hyperlink correct in ToC
+    \addcontentsline{toc}{chapter}{Declaration} 
+   	\input{Front/declaration.tex}  
 	\cleardoublepage
 	%%%%%%%%%%%%%%%%%%%  Certificate page %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\input{Front/certificate.tex}     
-	\addcontentsline{toc}{chapter}{CERTIFICATE} 
+    \phantomsection % To make the reference hyperlink correct in ToC
+	\addcontentsline{toc}{chapter}{Certificate} 
+	\input{Front/certificate.tex}  
 	\cleardoublepage
 % 	%%%%%%%%%%%%%%%%%%% Dedication page %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 	\input{dedication.tex}                   % dedication page
-% 	\addcontentsline{toc}{chapter}{Dedication}
-% 	\cleardoublepage
+ %    \phantomsection % To make the reference hyperlink correct in ToC
+	% \addcontentsline{toc}{chapter}{Dedication}
+ % 	\input{Front/dedication.tex}                   % dedication page
+	% \cleardoublepage
 	%%%%%%%%%%%%%%%%%%% Acknowledgement page %%%%%%%%%%%%%%%%%%%%%%%%%%
+    \phantomsection % To make the reference hyperlink correct in ToC
+    \addcontentsline{toc}{chapter}{Acknowledgement}
     \input{Front/acknowledgment.tex}
-    \addcontentsline{toc}{chapter}{ACKNOWLEDGMENTS}
 	\cleardoublepage
 	%%%%%%%%%%%%%%%%%%% Abstract page %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \phantomsection % To make the reference hyperlink correct in ToC
+    \addcontentsline{toc}{chapter}{Abstract}
 	\input{Front/abstract.tex}
-	\addcontentsline{toc}{chapter}{ABSTRACT}
 	\clearpage
 	%%%%%%%%%%%%%%%%%%% Table of contents %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\begin{flushleft}
-		\tableofcontents
-	\end{flushleft}
+	\tableofcontents
 	\cleardoublepage
 	%%%%%%%%%%%%%%%%%%% Table of figures %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\begin{flushleft}
-		\addcontentsline{toc}{chapter}{List of Figures}
-		\listoffigures
-	\end{flushleft}	
+% The List of Figures is produced with \listoffigures; you have to manually add it to the table of contents, so it should be preceded by \cleardoublepage in order to ensure that the page reference is correct. Uncomment the \phantomsection line if you're using hyperref
+ 
+    \phantomsection % To make the reference link correct
+	\addcontentsline{toc}{chapter}{List of Figures}
+	\listoffigures
 	\cleardoublepage
 	%%%%%%%%%%%%%%%%%%% Table of tables %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\begin{flushleft}
-		\addcontentsline{toc}{chapter}{List of Tables}
-		\listoftables
-	\end{flushleft}
+    \phantomsection % To make the reference link correct
+    \addcontentsline{toc}{chapter}{List of Tables}
+	\listoftables
 	\cleardoublepage
 	%%%%%%%%%%%%%%%%%%% Table of acroymns %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+    \phantomsection % To make the reference link correct
 	\input{Front/LOA.tex}
-	\addcontentsline{toc}{chapter}{List of Acronyms/Abbreviations}
-
 	\clearpage
 	%%%%%%%%%%%%%%%%%%% Table of symbols %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+     \phantomsection % To make the reference link correct
     \input{Front/LOS.tex}
-	\addcontentsline{toc}{chapter}{List of Symbols}
-
 	\cleardoublepage
-	%%%%%%%%%%%%%% Chapters 1-9 %%%%%%%%%%%%%%
+	%%%%%%%%%%%%%% Content Chapters %%%%%%%%%%%%%%
+ 
 	\pagenumbering{arabic}
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Chapter-1 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	\input{chapters/chapter1.tex}
