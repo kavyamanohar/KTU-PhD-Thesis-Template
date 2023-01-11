@@ -1,4 +1,4 @@
-# KTU PhD Thesis Template 
+# KTU (APJ Abdul Kalam Technological University, Thiruvananthapuram, Kerala, India) PhD Thesis Template 
 
 - It has been drafted as per regulations in https://ktu.edu.in/data/THESIS%20AND%20SYNOPSIS%20FORMAT.pdf
 
